@@ -44,7 +44,8 @@ jobs:
             path: staging
             
         - name: Publish to GitHub Packages Apache Maven
-          run: mvn deploy -s $GITHUB_WORKSPACE/pom.xml
+          # run: mvn deploy -s $GITHUB_WORKSPACE/pom.xml
+          run: mvn deploy -DaltDeploymentRepository=github::default::https://maven.pkg.github.com/maurosantos-vakt/github-action-maven-example-start
           env:
             GITHUB_TOKEN: ${{ github.token }}
       
