@@ -1,5 +1,5 @@
 name: Maven CI/CD
-
+# added a comment just for test purposes
 on:
  push:
     # branches: [ master ]
